@@ -1,4 +1,4 @@
-import project from '@/styles/scss/content/project/project.module.scss'  
+import project from '@/styles/scss/pages/project.module.scss'  
 import RTitle from "@/components/common/RTitle"
 import projectList from '@/pages/api/Project.json'
 import Link from 'next/link'

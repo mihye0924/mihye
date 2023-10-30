@@ -1,5 +1,5 @@
  
-import contact from '@/styles/scss/content/contact.module.scss'
+import contact from '@/styles/scss/pages/contact.module.scss'
 import Link from 'next/link'
 import contactList from '@/pages/api/Contact.json' 
 

@@ -1,4 +1,4 @@
-import career from '@/styles/scss/content/career.module.scss' 
+import career from '@/styles/scss/pages/career.module.scss' 
 import RCareerSwiper from '@/components/content/RCareerSwiper' 
 import RTitle from '@/components/common/RTitle' 
 import { useEffect } from 'react'

@@ -7,7 +7,7 @@ import Maquee from '@/components/Maquee'
 import Nav from '@/components/layout/Nav';  
 import RLoading from '@/components/common/RLoading' 
 import RTop from '@/components/common/RTop'
-import all from '@/styles/scss/content/content.module.scss'
+import all from '@/styles/scss/pages/content.module.scss'
 import Link from 'next/link' 
 import AOS from "aos";
 import "aos/dist/aos.css";

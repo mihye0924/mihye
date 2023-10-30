@@ -1,4 +1,4 @@
- import about from '@/styles/scss/content/about.module.scss' 
+ import about from '@/styles/scss/pages/about.module.scss' 
  import Context from '@/context/context';
 import { useContext } from 'react';
 

@@ -1,0 +1,296 @@
+.contact {
+    &_wrap {
+        position: relative;   
+        padding: 150px 0;
+    } 
+    &_box {
+        display: flex; 
+        p {
+            width: 200px;
+            font-family: $noto-medium;
+            &:nth-child(1) { 
+                font-size: $fs28;
+                > span {
+                    color: $yellow;
+                    letter-spacing: -1px;
+                }
+            }
+            &:nth-child(2) {
+                margin-top: 10px;
+                font-size: $fs16;
+                span {
+                    letter-spacing: -1px;
+                    display: block;
+                    font-family: $noto-regular;
+                }
+            }
+        }
+        ul {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            li {
+                position: relative;
+                width: calc(100%/4);
+                a{ 
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    p { 
+                        font-family: $noto-regular;  
+                        color: $darkgray; 
+                    }
+                }
+                &:hover {
+                   i {
+                    &::after {
+                       position: absolute;
+                        content: "";
+                        width: 45px;
+                        height: 45px;
+                        top: -20px;
+                        background-color: rgb(255, 220, 34);
+                        z-index: -1;
+                        border-radius: 25px;
+                        animation: op 0.3s linear;
+                        }
+                   }
+                }
+            }
+        }
+        :global {
+            .email { 
+                display: block;
+                width: 50px;
+                height: 50px;
+                background: url('/images/common/email.png') no-repeat;
+                background-size: 100%; 
+            }
+            .phone {
+                display: block;
+                width: 50px;
+                height: 50px;
+                background: url('/images/common/phone.png') no-repeat;
+                background-size: 100%;
+            }
+            .resume {
+                display: block;
+                width: 50px;
+                height: 50px;
+                background: url('/images/common/resume.png') no-repeat;
+                background-size: 100%;
+            }
+            .notion {
+                display: block;
+                width: 50px;
+                height: 50px;
+                background: url('/images/common/notion.png') no-repeat;
+                background-size: 100%;
+            }
+        }
+    }
+} 
+
+@keyframes op {
+    0%{ opacity: 0; transform: scale(0); }
+    100%{ opacity: 1; transform: scale(1); }
+}
+
+
+// 노트북
+@media all and ( max-width: $d-width ) {
+    .contact {
+        &_wrap {
+            :global {
+            .l-content {
+                max-width: 100%;
+            }
+            }
+            padding: 10vh 20px 10vh 20px;
+        }
+        &_box {
+            display: flex; 
+            flex-wrap: wrap;
+            gap: 50px; 
+            flex-direction: column;
+            align-items: center;
+            p {
+                width: 100%;
+                text-align: center;
+                &:nth-child(1) { 
+                    font-size: 4vw;
+                    >span {
+                        color: $yellow;
+                        letter-spacing: -1px;
+                    }
+                }
+                &:nth-child(2) {
+                    margin-top: 10px;
+                    font-size: 2.5vw; 
+                    >span { 
+                            &:first-child {
+                                margin-right: 5px;
+                            }
+                        display: inline-block;
+                    }
+                }
+            }
+            ul { 
+                display: flex; 
+                flex-wrap: wrap; 
+                justify-content: center;
+                width: 480px;
+                li {
+                    position: relative;
+                    width: calc((100% - 40px) /2);   
+                    padding: 30px 0;
+                    a {
+                            p {
+                                font-size: 2vw !important;
+                            }
+                    } 
+                        &:hover {
+                            i {
+                            &::after { 
+                                top: 10px; 
+                                }
+                            }
+                        }
+                }
+            }  
+            :global {
+                .email {  
+                    width: 6vw;
+                    height: 6vw; 
+                }
+                .phone { 
+                    width: 6vw;
+                    height: 6vw; 
+                }
+                .resume { 
+                    width: 6vw;
+                    height: 6vw; 
+                }
+                .notion { 
+                    width: 6vw;
+                    height: 6vw; 
+                }
+            }
+        }
+    }
+}
+
+// 태블릿
+@media all and ( max-width: $t-width ) {
+    .contact { 
+        &_box { 
+            gap: 30px;  
+            p { 
+                &:nth-child(1) { 
+                    font-size: 5.5vw; 
+                }
+                &:nth-child(2) {
+                    margin-top: 10px;
+                    font-size: 3vw;  
+                }
+            }
+            ul {  
+                width: 100%;
+                li { 
+                    a {
+                        p {
+                            font-size: 2.5vw !important;
+                        }
+                    } 
+                        &:hover {
+                            i {
+                            &::after { 
+                                width: 35px;
+                                height: 35px;
+                                top: 15px; 
+                                }
+                            }
+                        }
+                }
+            }  
+            :global {
+                .email {  
+                    width: 8vw;
+                    height: 8vw; 
+                }
+                .phone { 
+                    width: 8vw;
+                    height: 8vw; 
+                }
+                .resume { 
+                    width: 8vw;
+                    height: 8vw; 
+                }
+                .notion { 
+                    width: 8vw;
+                    height: 8vw; 
+                }
+            }
+        }
+    }
+}
+
+
+// 모바일
+@media all and ( max-width: $m-width ) {
+    .contact { 
+        &_box { 
+            gap: 30px;  
+            p { 
+                &:nth-child(1) { 
+                    font-size: 7.5vw; 
+                }
+                &:nth-child(2) {
+                    margin-top: 10px;
+                    font-size: 4vw;  
+                    margin-right: 0; 
+                    span {
+                        display: block;
+                    }
+                }
+            }
+            ul {   
+                li { 
+                    a {
+                        p {
+                            font-size: 3.2vw !important;
+                        }
+                    } 
+                        &:hover {
+                            i {
+                            &::after { 
+                                width: 50px;
+                                height: 50px;
+                                top: 5px;
+                                }
+                            }
+                        }
+                }
+            }  
+            :global {
+                .email {  
+                    width: 12vw;
+                    height: 12vw; 
+                }
+                .phone { 
+                    width: 12vw;
+                    height: 12vw; 
+                }
+                .resume { 
+                    width: 12vw;
+                    height: 12vw; 
+                }
+                .notion { 
+                    width: 12vw;
+                    height: 12vw; 
+                }
+            }
+        }
+    }
+}
