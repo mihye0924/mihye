@@ -1,0 +1,52 @@
+.nav {
+  &_wrap { 
+    transition: .6s;
+    position: fixed;
+    right: 15px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+    li {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      button { 
+        cursor: pointer; 
+        width: 10px;
+        height: 10px;
+        border-radius: 15px;
+        background-color:#3b3b3b;
+        margin: 5px 0;
+      } 
+    }
+  } 
+  &_active {
+    border: 2px solid #fff;
+    border-radius: 25px;
+    width: 18px; 
+    height: 18px;
+    align-items: center;
+    button {  
+      background-color: $white !important;
+     }
+  }
+  &_yellow {
+    .nav {
+      &_active {
+        border: 2px solid $yellow;
+        button {
+          background-color: $yellow !important;
+        }
+      }
+    }
+  }
+}
+ 
+// 노트북
+@media all and ( max-width: $d-width ) {
+  .nav {
+    &_wrap {
+      display: none;
+    }
+  }
+}

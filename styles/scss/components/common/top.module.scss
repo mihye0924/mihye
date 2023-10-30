@@ -1,0 +1,85 @@
+.top { 
+    &_top {
+        opacity: 0;
+        width: 5rem;
+        height: 5rem;
+        position: fixed;
+        bottom: 5rem;
+        right: 5rem;
+        background: rgb(65 65 65 / 18%);
+        box-shadow: 0px 0px 20px rgb(30 30 30 / 47%);
+        -webkit-backdrop-filter: blur(45px);
+        backdrop-filter: blur(45px);
+        z-index: 5;
+        transition: .6s;
+        border-radius: 50%;
+        overflow: hidden;
+        padding: 3px;
+        &:hover {
+            transform: scale(1.05);   
+        } 
+        button {
+            cursor: pointer;
+            color: $white;
+            width: 100%;
+            height: 100%;
+            line-height: 6.5rem; 
+            font-family: $noto-medium;
+            border-radius: 50%;
+            &::before {
+                content: "";
+                display: block; 
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                top: 40%;
+                width: 1.2rem;
+                height: 1.3rem;
+                background: url('/images/common/btn_top.png') no-repeat center/100%; 
+            }
+        }
+        &_active {
+            opacity: 1;
+        }
+        &_bg {
+            opacity: 1;
+            background-color: rgba(255, 255, 255, 0.42);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.169);
+            button {
+                color: $black;
+                &::before {
+                    content: "";
+                    display: block; 
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    top: 40%;
+                    width: 1.2rem;
+                    height: 1.4rem;
+                    background: url('/images/common/btn_top_black.png') no-repeat center/100%;
+                }
+            }
+        }
+    }
+}
+
+
+// 노트북
+@media all and ( max-width: $d-width ) {
+    .top { 
+        &_top { 
+            bottom: 40px;
+            right: 30px;
+        }
+    }
+}
+// 노트북
+@media all and ( max-width: $m-width ) {
+    .top { 
+        &_top { 
+            display: none;
+        }
+    }
+}

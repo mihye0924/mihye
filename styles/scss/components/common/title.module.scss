@@ -1,0 +1,88 @@
+
+.title {
+  &_h1 {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-end;
+    margin-bottom: 125px;
+    h1 {  
+      position: relative; 
+      font-size: $fs24; 
+      color: $white;  
+      line-height: 1;
+      font-family: $popins-light;  
+      margin-bottom: 20px; 
+      &::after {
+        position: absolute;
+        content: '';
+        width: 5px;
+        height: 5px;
+        background-color: #ffdc22;
+        border-radius: 15px;
+        bottom: 0;
+        margin-left: 5px;
+      }
+    }
+    p {
+      font-size: $fs50;
+      color: $white; 
+      font-family: $noto-medium;
+      letter-spacing: -2px;
+      line-height: 1.4;
+    }
+    span { 
+      font-family: $popins-medium;  
+      font-size: $fs20; 
+      color: $darkgray;
+    } 
+  }
+  &_active {
+    h1{
+      color: $darkgray;
+    }
+    p {
+      color: $darkgray;
+    }
+    span {
+      color: $lightgray;
+    }
+  }
+}
+
+
+// 노트북
+@media all and ( max-width: $d-width ) {
+  .title {
+    &_h1 { 
+      margin-bottom: 12vh;
+      h1 {
+        font-size: 3.5vw;
+      }
+      p {
+        font-size: 5.5vw;
+      }
+      span {
+        font-size: $fs18;
+      }
+    }
+  }
+}
+
+
+// 태블릿
+@media all and ( max-width: $t-width ) {
+  .title {
+    &_h1 { 
+      margin-bottom: 10vh;
+      h1 {
+        font-size: 4.5vw;
+      }
+      p {
+        font-size: 6.5vw;
+      }
+      span {
+        font-size: $fs14;
+      }
+    }
+  } 
+}

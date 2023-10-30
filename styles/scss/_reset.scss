@@ -1,0 +1,66 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+} 
+html {
+  min-width: 1740px;
+  width: 100%;
+  scroll-behavior: smooth;
+  display: block;
+  box-sizing: border-box; 
+}
+body {
+  zoom: 100%; 
+  overflow-x: hidden; 
+  &::-webkit-scrollbar {
+    width: 0;
+  } 
+  &.active {
+      overflow: hidden;
+  } 
+}
+body, html { 
+  font-family: $noto-regular; 
+  font-size: $fs14; 
+  color: $gray;  
+ } 
+h1,h2,h3,h4,h5,h6,a,span,p { color: $darkgray; }
+a { text-decoration: none; }
+ul, li { list-style-type: none; }  
+button {
+  background-color: transparent; outline: none;
+  border: 0;
+}
+@media all and ( max-width: $d-width) { 
+  html {
+    min-width: 100%;
+  }
+}
+button, a { 
+  &:focus-visible {
+    outline: 3px dashed red;
+  }
+  // &:focus {
+  //   outline: 3px dashed red;
+  // }
+}    
+a::selection,
+b::selection,
+p::selection,
+span::selection,
+ul::selection,
+li::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+div::selection,
+input::selection,
+button::selection {
+  background-color: $white;
+  color:$darkgray; 
+}

@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "페리페라",
+        "link" : "https://mihye0924.github.io/PERIPERA/peripera",
+        "engTitle": "PERIPERA",
+        "img": "/images/content/peripera-main.png"
+    },
+    {
+        "id": 2,
+        "title": "서울우유",
+        "link" : "https://mihye0924.github.io/SEOULMILK/seoulmilk",
+        "engTitle": "SEOULMILK",
+        "img": "/images/content/seoulmilk-main.png"
+    },
+    {
+        "id": 3,
+        "title": "골든디스크어워즈",
+        "link" : "https://mihye0924.github.io/GoldenDiscAwards/",
+        "engTitle": "GOLENDISC AWARDS",
+        "img": "/images/content/golendisc-main.png"
+    },
+    {
+        "id": 4,
+        "title": "리-블로그",
+        "link" : "https://github.com/mihye0924/re-blog",
+        "engTitle": "RE-BLOG",
+        "img": "/images/content/reblog-main.png"
+    }
+]

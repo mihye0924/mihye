@@ -1,0 +1,415 @@
+.careerSwiper {  
+    &_box { 
+        position: relative;
+        width: $d-width;
+        margin: 0 auto;
+        :global {
+            .swiperCustom1 {  
+                .swiper-slide {
+                    border-radius: 10px;
+                    overflow: hidden; 
+                    box-sizing: border-box;
+                    height: 620px;
+                    margin-bottom: 10px;
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }  
+            }
+            .swiperCustom2 {  
+                .swiper-slide { 
+                    border-radius: 10px;
+                    overflow: hidden; 
+                    box-sizing: border-box;
+                    height: 200px;
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    } 
+    &_nav { 
+        ul {
+            display: flex; 
+            flex-wrap: wrap;  
+        } 
+        :global {
+            .pagination_career,
+            .career_ul {
+            top:  0 !important;
+            position: relative;
+                .swiper-pagination-bullet,
+                .bullet {  
+                    cursor: pointer;
+                    height: inherit;
+                    width: calc((100% - 40px) / 5) !important;
+                    box-sizing: border-box;
+                    padding: 10px 30px;
+                    opacity: 1 !important;
+                    background-color: $white !important; 
+                    border-radius: 0 !important;
+                    margin: 0 10px 10px 0 !important; 
+                    text-align: center; 
+                    &:nth-of-type(5n) {
+                        margin: 0 0 10px 0 !important;
+                    }
+                    span {
+                        display: block;
+                        box-sizing: border-box; 
+                        font-family: $noto-regular;
+                        color: $black; 
+                    }
+                    &-active { 
+                        background-color:  hsl(216, 100%, 50%) !important; 
+                        span {
+                            color: $white;
+                            font-family: $noto-regular
+                        }   
+                    } 
+                }
+            }
+        }
+    }
+    &_swiper {
+        &_button {  
+            &_prev { 
+                animation: rightLeft 1s linear; 
+                animation-iteration-count: infinite; 
+            }    
+            &_next { 
+                animation: leftRight 1s linear; 
+                animation-iteration-count: infinite; 
+            }
+            :global {
+                .career_prev { 
+                    left: var(--swiper-navigation-sides-offset, -115px) !important;
+                    width: 50px;
+                    height: 50px;   
+                    &::after {
+                        color: $white !important;
+                        background-color: rgba(0, 0, 0, 0.192);
+                        padding: 15px 20px;
+                        border-radius: 50px;
+                        font-size: $fs20;
+                    }
+                }    
+                .career_next { 
+                    right: var(--swiper-navigation-sides-offset, -115px) !important;
+                    width: 50px;
+                    height: 50px;    
+                    &::after {
+                        color: $white !important;
+                        background-color: rgba(0, 0, 0, 0.192);
+                        padding: 15px 20px;
+                        border-radius: 50px;
+                        font-size: $fs20;
+                    }    
+                } 
+            }
+        }
+    } 
+    &_content {  
+        margin: 0 auto; 
+        padding: 50px 0;
+        h3 {
+            font-size: $fs36;
+            color: $black;
+        }
+        p {
+            font-size: $fs16; 
+            color: $darkgray;
+        } 
+        button {
+            font-family: $noto-bold;
+            color: $white;
+            display: inline-block; 
+            margin: 3px;
+            box-sizing: border-box;
+        }
+        :global {
+            .lina {
+                color:  hsl(216, 100%, 50%);
+                text-shadow: 0px 0px 1px rgb(133 133 133);
+            } 
+        }
+    }
+    &_text {
+        margin-top: 30px; 
+        button {
+            cursor: pointer;
+        }
+        span {
+            display: block;
+            color: $white;
+            font-family: $noto-light;
+        } 
+        p {
+            margin-top: 20px; 
+            span{ 
+                font-size: $fs14;  
+                color: $white;
+            }
+        } 
+    } 
+    &_link { 
+        display: flex;
+        margin-top: 50px; 
+        text-align: center; 
+        &_white {
+            background-color: $white;  
+            font-family: $noto-bold;
+            margin-right: 10px;
+            padding: 12px 20px; 
+            box-sizing: border-box;
+        }
+        &_gray {
+            position: relative;
+            border: 1px solid $darkgray; 
+            background-color: #181818;
+            color: $white;  
+            padding: 12px 20px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+
+@keyframes rightLeft {
+    0%{transform: translateX(0);}
+    50%{transform: translateX(10px);}
+    100%{transform: translateX(0);}
+}
+@keyframes leftRight {
+    0%{transform: translateX(0);}
+    50%{transform: translateX(-10px);}
+    100%{transform: translateX(0);}
+} 
+
+// 노트북
+@media all and ( max-width: $d-width ) {
+    .careerSwiper {  
+        &_box {  
+            width: 100%; 
+            :global {
+                .swiperCustom1 {  
+                    .swiper-slide { 
+                        height: 500px; 
+                    }  
+                } 
+            }
+        } 
+        &_nav { 
+        :global {
+            .pagination_career,
+            .career_ul { 
+                .swiper-pagination-bullet,
+                .bullet {   
+                    padding: 8px 10px;
+                    span { 
+                        white-space: pre;
+                        font-size: $fs12;
+                    } 
+                }
+            }
+        }
+        }
+        &_swiper {
+            &_button {  
+                position: absolute;
+                top: -65px; 
+                right: 0; 
+                height: 45px;
+                &_prev { 
+                    animation: none;
+                }    
+                &_next { 
+                    animation: none;
+                }
+                :global {
+                    .career_prev { 
+                        left: var(--swiper-navigation-sides-offset, -110px) !important; 
+                        &::after { 
+                            font-size: $fs16;
+                        }
+                    }    
+                    .career_next { 
+                        right: var(--swiper-navigation-sides-offset, 0px) !important;  
+                        &::after { 
+                            font-size: $fs16;
+                        }    
+                    } 
+                }
+            }
+        }  
+        &_content {   
+            padding: 30px 0;
+            h3 {
+                font-size: $fs30; 
+            }
+            p {
+                font-size: $fs14;  
+            }   
+        }
+        &_text {
+            margin-top: 2.5vw; 
+            p { 
+                span{ 
+                    font-size: $fs14;  
+                    color: $white;
+                }
+            } 
+        }
+        &_link {  
+            margin-top: 5vw;
+            &_white {  
+                text-align: center; 
+                padding: 1.5vw 2vw; 
+                font-size: $fs12;
+            }
+            &_gray {
+                padding: 1.5vw 2vw; 
+                font-size: $fs12; 
+            }
+        }
+    }
+}
+
+// 태블릿
+@media all and ( max-width: $t-width ) {
+    .careerSwiper {  
+        &_box {  
+            width: 100%; 
+            :global {
+                .swiperCustom1 {  
+                    .swiper-slide { 
+                        height: 70vw; 
+                    }  
+                }  
+                .swiperCustom2 {  
+                    .swiper-slide {  
+                        height: 35vw; 
+                    }
+                }
+            }
+        } 
+        &_nav { 
+        :global {
+            .pagination_career,
+            .career_ul { 
+                .swiper-pagination-bullet,
+                .bullet {   
+                    padding: 8px 10px;
+                    span { 
+                        white-space: pre;
+                        font-size: $fs12;
+                    } 
+                }
+            }
+        }
+        }
+        &_swiper {
+            &_button {  
+                position: absolute;
+                top: -65px; 
+                right: 0; 
+                height: 45px;
+                &_prev { 
+                    animation: none;
+                }    
+                &_next { 
+                    animation: none;
+                }
+                :global {
+                    .career_prev { 
+                        left: var(--swiper-navigation-sides-offset, -110px) !important; 
+                        &::after { 
+                            font-size: $fs12;
+                            padding: 12px 15px;
+                        }
+                    }    
+                    .career_next { 
+                        right: var(--swiper-navigation-sides-offset, 0px) !important;  
+                        &::after { 
+                            font-size: $fs12;
+                            padding: 12px 15px;
+                        }    
+                    } 
+                }
+            }
+        }  
+        &_content {   
+            padding: 30px 0;
+            h3 {
+                font-size: $fs30; 
+            }
+            p {
+                font-size: $fs14;  
+            }   
+        }
+        &_text {
+            margin-top: 2.5vw; 
+            p { 
+                span{ 
+                    font-size: $fs14;   
+                }
+            } 
+        }
+        &_link {  
+            margin-top: 5vw;
+            &_white {  
+                text-align: center; 
+                padding: 1.5vw 2vw; 
+                font-size: $fs12;
+            }
+            &_gray {
+                padding: 1.5vw 2vw; 
+                font-size: $fs12; 
+            }
+        }
+    }
+}
+
+
+// 모바일
+@media all and ( max-width: $m-width ) {
+    .careerSwiper {
+        &_nav { 
+            ul {
+                display: flex; 
+                flex-wrap: wrap;  
+            } 
+            :global {
+                .pagination_career,
+                .career_ul { 
+                    .swiper-pagination-bullet,
+                    .bullet {   
+                        width: calc((100% - 20px) / 3) !important; 
+                        &:nth-of-type(3n) {
+                            margin: 0 0 10px 0 !important;
+                        }
+                        &:nth-of-type(5n) {
+                            margin: 0 10px 10px 0 !important;
+                        }
+                    } 
+                }
+            }
+        }
+        &_text {
+            margin-top: 5.5vw;  
+        }
+        &_link {  
+            margin-top: 8vw;
+            &_white {   
+                padding: 2.5vw 5vw;  
+            }
+            &_gray {
+                padding: 2.5vw 5vw;  
+            }
+        }
+    }
+}

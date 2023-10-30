@@ -1,0 +1,14 @@
+.maquee {
+    &_wrap { 
+        z-index: -1;
+        background: #121212; 
+        span {
+            display: inline-block;
+            font-size: 120px;
+            margin-right: 50px;
+            color: #777777;
+            opacity: 0.1;
+            font-family: $popins-extra-b;
+        }
+    }
+}

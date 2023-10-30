@@ -1,0 +1,162 @@
+ 
+.header { 
+    &_wrap {
+        position: relative;
+        z-index: 5;
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+    }
+    &_box {  
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    &_scrollbar {
+        position: fixed;
+        width: 100%;
+        height: 5px;
+        z-index: 5;
+        background-color: #fff;
+        overflow: hidden;
+    }
+    &_h1 {  
+        font-family: $courgette-r;
+        width: 150px;
+        text-align: center;
+        span {
+            display: inline-block;
+            margin-right: 5px;
+            font-size: $fs24;
+            color: $black;
+            background-color: $yellow;
+            border-radius: 25px;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+        }
+        a {
+            font-size: $fs24;
+            line-height: 60px;
+            color: $yellow;
+        } 
+    } 
+    &_ul { 
+        display: flex;
+        align-items: center; 
+        li {
+            margin: 0 20px;
+            button { 
+                cursor: pointer;
+                font-size: $fs16;
+                color: $white;
+                letter-spacing: -0.5px;
+                font-family: $noto-medium;
+                &:hover {
+                    color: $yellow;
+                }
+            }
+        } 
+    }
+    &_button { 
+        position: relative;
+        width: 80px;
+        height: 80px;
+        button {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%; 
+            background-color: $black;
+            &::after {
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 30px;
+                height: 30px;
+                background: url('/images/common/icon_menu.svg') no-repeat;
+                background-size: 100%;
+            }
+        }
+    } 
+    &_bg {
+        background-color: $white; 
+        border-bottom: 1px solid #f1f1f1; 
+        box-sizing: border-box;
+        animation: upDown 0.4s ease-in-out;
+        ul {
+            li {
+                button {
+                    color: $darkgray;
+                }
+            }
+        }
+        h1 { 
+            a {
+                color: $darkgray;
+            }
+            span {
+                color: $white;
+            }
+        }
+    } 
+} 
+
+@keyframes upDown {
+    0%{ opacity: 0; }
+    100%{ opacity: 1; }
+}
+
+
+// 노트북
+@media all and ( max-width: $d-width ) {
+    .header {
+        &_h1 {
+            width: 110px;
+            span {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                font-size: $fs20;
+            }
+            a {
+                font-size: $fs20;
+            }
+        }
+        &_ul {
+            li {
+                button { 
+                    font-size: $fs14;
+                }
+            }
+        }
+        &_button {
+            width: 65px;
+            height: 65px;
+            button {
+                &::after {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+        &_bg {
+            height: 65px;
+            line-height: 65px;
+        }
+    }
+}
+ 
+// 태블릿
+@media all and ( max-width: $t-width ) {
+   .header {
+        &_ul {
+            display: none;
+        }
+   } 
+}
+ 

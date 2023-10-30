@@ -1,0 +1,32 @@
+.footer {
+    &_wrap {  
+        border-top: 1px solid #f1f1f1;
+        background: #0b0b0b;    
+        :global {
+            .l-content {
+                padding: 20px 0 !important;
+            }
+        } 
+        p {
+            margin-bottom: 10px;
+        }
+        span, p {
+            text-align: center;
+            color: $lightgray; 
+            font-size: $fs12;
+        }
+    }
+}
+
+// 노트북
+@media all and ( max-width: $d-width ) { 
+.footer {
+    &_wrap {  
+            :global {
+                .l-content {
+                    padding: 20px 15px !important;
+                }
+            } 
+        }
+    }
+}
