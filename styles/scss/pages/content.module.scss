@@ -140,3 +140,13 @@
         }
     } 
 } 
+
+
+// 태블릿
+@media all and ( max-width: $t-width ) {
+.all { 
+        &_cursor {
+            display: none;
+        }
+    }
+}
