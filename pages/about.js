@@ -46,7 +46,7 @@ const About = () => {
                 data-aos="fade-up"  
                 data-aos-delay="1600" 
                 >
-                이러한 자세로 포기하지 않고 <span>꾸준히 성장해 나아가는 </span>사람이 되겠습니다.
+                이러한 자세로 포기하지 않고 <span>꾸준히 성장해 나아가는 </span>웹 퍼블리셔가 되겠습니다.
               </h4>
             </div>
             <div 
