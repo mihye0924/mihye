@@ -17,8 +17,7 @@
     border-radius: 20px;
     overflow: hidden;
     img {
-      width: 100%;
-      height: auto;
+      width: 100%; 
     }
   }
   &_text {  
@@ -141,5 +140,15 @@
         font-size: $fs14;  
       }
     }
+  }
+}
+
+// 모바일
+@media all and ( max-width: 480px ) {
+  .about {  
+    &_img {
+      max-height: inherit;
+      height: 430px;
+    } 
   }
 }

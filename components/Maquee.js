@@ -6,7 +6,7 @@ const Maquee = () => {
             <Marquee className={maquee.maquee_wrap} speed={150} pauseOnHover={true}>
                 <span>I&rsquo; M</span> 
                 <span>WEB</span>
-                <span>FRONT-END DEVELOPMENT</span>
+                <span>PUBLISHER</span>
             </Marquee>
         </section>
     )

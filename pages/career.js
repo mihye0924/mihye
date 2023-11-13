@@ -37,7 +37,7 @@ const Career = ({
   return(
       <section id='career' className={career.career_wrap}> 
         <div className='career-bg'></div> 
-        <RTitle mainTitle="Career" mainSubTitle="값진 경험과 노하우를 <br> 쌓은 커리어" subTitle="Front-End Develop" /> 
+        <RTitle mainTitle="Career" mainSubTitle="값진 경험과 노하우를 <br> 쌓은 커리어" subTitle="WEB PUBLISHER" /> 
         <RCareerSwiper />   
       </section>
   )

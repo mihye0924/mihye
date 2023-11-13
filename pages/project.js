@@ -89,7 +89,7 @@ const Project = ({
                         maqueeHeight={maqueeHeight}
                         mainTitle="Project" 
                         mainSubTitle="실력 향상!! <br/> 빠른 변화에 대응하기"
-                        subTitle="Front-End Develop"
+                        subTitle="WEB PUBLISHER"
                     />
                     <p className={project.project_box_mouse}>
                         <i className="arrow_down"/>
