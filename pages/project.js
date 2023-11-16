@@ -107,7 +107,13 @@ const Project = ({
                                 >
                                     <Link tabIndex={-1} href={item.link} target='_blank'>
                                         <img src={`${prefix}/${item.img}`} alt={item.title}/>
-                                        <span>{item.title}</span>
+                                        <p>
+                                            <span>{ item.title }</span>
+                                            {
+                                                item.test &&
+                                                <span>{item.test}</span>
+                                            }
+                                        </p>
                                         <div className={project.project_box_ul_subbox}>
                                             <div> 
                                                 <i className='arrow-icon' />

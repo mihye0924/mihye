@@ -23,6 +23,7 @@
     {
         "id": 4,
         "title": "리-블로그",
+        "test":"테스트 ID:1004, PW:1004",
         "link": "https://mihye0924.github.io/re-blog/",
         "engTitle": "RE-BLOG",
         "img": "/images/content/reblog-main.png"
