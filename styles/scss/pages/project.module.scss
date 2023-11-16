@@ -64,6 +64,10 @@
                     span {
                         color: $white;
                         display: block;
+                        &:last-child { 
+                            font-size: $fs16;
+                            color: $black !important;
+                        }
                     }
                 }  
                 &:hover { 
