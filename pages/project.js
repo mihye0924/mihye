@@ -93,7 +93,8 @@ const Project = ({
                     />
                     <p className={project.project_box_mouse}>
                         <i className="arrow_down"/>
-                        <span>이미지에 마우스를 올리면 프로젝트를 볼 수 있습니다.</span>
+                        <span className='pc'>이미지에 마우스를 올리면 프로젝트를 볼 수 있습니다.</span>
+                        <span className='mob'>이미지를 클릭하면 프로젝트를 볼 수 있습니다.</span>
                     </p>
                     <ul className={`ul ${project.project_box_ul}`}>
                         {
@@ -101,7 +102,7 @@ const Project = ({
                             return(
                                 <li 
                                     data-aos="zoom-in"
-                                    data-aos-delay={`${500 * (index+1)}`}
+                                    data-aos-delay={`${200 * (index+1)}`}
                                     key={item.id}  
                                     tabIndex={0}
                                 >

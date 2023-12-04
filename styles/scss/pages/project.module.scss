@@ -299,16 +299,22 @@
             animation-iteration-count: infinite;
             :global {
                 .arrow_down {
+                    margin-right: 5px;
                     display: inline-block;
                     width: 20px;
                     height: 30px;
                     background: url('https://mihye0924.github.io/mihye/images/common/arrow_down.png') no-repeat;
                     background-size: 20px 30px; 
+                } 
+                span{
+                    &.pc {
+                        display: inline-block;
+                        margin-left: 10px; 
+                    }
+                    &.mob {
+                        display: none;
+                    }
                 }
-            }
-            span {
-                display: inline-block;
-                margin-left: 10px; 
             }
         } 
         &_button{ 
@@ -384,7 +390,7 @@
                     height: auto;   
                     span { 
                         font-size: 2.8vw; 
-                        padding: 1.5vw 2.5vw;
+                        padding: 1.5vw 0;
                     }  
                     &:hover { 
                         .project_box {
@@ -672,7 +678,7 @@
                     width: calc(100%/1);     
                     span { 
                         font-size: 6vw; 
-                        padding: 4.5vw; 
+                        padding: 1.5vw 0; 
                     }  
                     &:hover {  
                         .project_box {
@@ -768,10 +774,16 @@
                         width: 15px;
                         height: 20px; 
                         background-size: 100%;
+                    }  
+                    span{
+                        &.pc {  
+                            display: none;
+                        }
+                        &.mob {
+                            font-size: $fs14; 
+                            display: block;
+                        }
                     }
-                }
-                span {
-                    font-size: $fs14;
                 }
             } 
             &_button{  

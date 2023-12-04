@@ -144,11 +144,16 @@
 }
 
 // 모바일
-@media all and ( max-width: 480px ) {
-  .about {  
+@media all and ( max-width: 480px ) { 
+  .about {   
+    &_wrap { 
+      padding: 13vh 15px 5vh 15px;
+    }
+    &_box {
+      height: calc(100% - 500px);
+    }
     &_img {
       max-height: inherit;
-      height: 430px;
     } 
   }
 }

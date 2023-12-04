@@ -11,7 +11,7 @@ const About = () => {
         <div className={about.about_box}> 
           <div 
             data-aos="fade-right" 
-            data-aos-delay="400" 
+            data-aos-delay="200" 
             className={about.about_img}
           > 
             <img src={`${prefix}/images/content/mihye.jpg`} alt='미혜'/>
@@ -20,20 +20,20 @@ const About = () => {
             <div className={about.about_text}>
               <h2 
               data-aos="fade-up"  
-              data-aos-delay="800" 
+              data-aos-delay="400" 
               >
                 안녕하세요😀.<br/> 웹/앱을 보다 편리하고 보기 좋게 구현하는 <br /> 1년차 퍼블리셔 조미혜입니다.
               </h2> 
               <p 
                 data-aos="fade-up"  
-                data-aos-delay="1200" 
+                data-aos-delay="600" 
                 className={about.about_text_keyword}
               >
                 [ SINCERE ] : 성실하다.
               </p> 
               <h3 
                 data-aos="fade-up"  
-                data-aos-delay="1400" 
+                data-aos-delay="800" 
                 >
                 이 단어는 저를 대표하는 성실하다 라는 단어입니다.
                 저에게 있어서는 <span>꾸준함</span>이라는 대표적인 키워드가 있습니다. 
@@ -44,14 +44,14 @@ const About = () => {
               </h3>
               <h4 
                 data-aos="fade-up"  
-                data-aos-delay="1600" 
+                data-aos-delay="1000" 
                 >
                 이러한 자세로 포기하지 않고 <span>꾸준히 성장해 나아가는 </span>웹 퍼블리셔가 되겠습니다.
               </h4>
             </div>
             <div 
               data-aos="fade-up"  
-              data-aos-delay="1800" 
+              data-aos-delay="1200" 
               className={about.about_hash}
             >
               <span># 성실함</span>
