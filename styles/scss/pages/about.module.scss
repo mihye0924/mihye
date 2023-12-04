@@ -146,6 +146,14 @@
 // 모바일
 @media all and ( max-width: 480px ) { 
   .about {   
+    &_text {  
+      h2{  
+        font-family: $noto-medium !important; 
+      }
+      h3,h4 { 
+        font-family: $noto-light !important; 
+      }
+    }
     &_wrap { 
       padding: 13vh 15px 5vh 15px;
     }

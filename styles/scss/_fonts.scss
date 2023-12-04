@@ -63,4 +63,13 @@
   font-family: 'Exo-2';
   src: url("../fonts/Exo2-Bold.ttf");
 }
- 
+   
+@font-face {
+  font-family: "Apple-Gothic";
+  src: url("https://db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.eot");
+  src: url("https://db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.svg#Apple SD Gothic Neo Bold")format("svg");
+}
