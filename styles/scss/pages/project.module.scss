@@ -64,9 +64,11 @@
                     span {
                         color: $white;
                         display: block;
-                        &:last-child { 
+                    }
+                    :global {
+                        .test {
                             font-size: $fs16;
-                            color: $black !important;
+                            color:$black !important;
                         }
                     }
                 }  
