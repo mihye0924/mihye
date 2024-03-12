@@ -1,0 +1,31 @@
+ 
+// 한글 NotoSans
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+ // 영문 Poppins
+@font-face {
+  font-family: 'Moul';
+  src: url('https://fonts.cdnfonts.com/s/15990/Moul-Regular.woff') format('woff');;
+}  
+
+@font-face {
+  font-family: 'Poppins-ExtraBold'; 
+  src: url("../fonts/Poppins-ExtraBold.woff") format("woff");
+}   
+@font-face {
+  font-family: 'Poppins-Bold'; 
+  src: url("../fonts/Poppins-Bold.woff") format("woff");
+}  
+@font-face {
+  font-family: 'Poppins-Medium'; 
+  src: url("../fonts/Poppins-Medium.woff") format("woff");
+} 
+@font-face {
+  font-family: 'Poppins-Regular'; 
+  src: url("../fonts/Poppins-Regular.woff") format("woff");
+}  

@@ -1,0 +1,110 @@
+ 
+.all { 
+    &_skip {
+        position: relative;
+        z-index: 3000;
+    }
+    &_cursor {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 25px;
+        height: 25px; 
+        z-index: 10000;
+        pointer-events:  none;
+        span {   
+            opacity: 0; 
+            white-space: normal;
+            display: inline-block;
+            vertical-align: middle; 
+            line-height: 1;
+            text-align: center; 
+            color: $black; 
+        }
+        div {
+            position: fixed;
+            width: 25px;
+            height: 25px;
+            background-color: rgba(107, 107, 107, 0.247); 
+            border-radius: 50%;  
+            box-sizing: border-box;  
+            transform: scale(0.8) translate(-50%,-50%); 
+            pointer-events:  none;
+        }  
+        :global {
+            .scale {
+                width: 85px;
+                height: 85px; 
+                line-height: 80px;
+                transition: .3s cubic-bezier(0, 0, 0.2, 1) !important; 
+                transform: translate(-42.5%, -42.5%);
+                border: none; 
+            }
+            .green { 
+                background-color:#02ff17;
+                 span { 
+                    opacity: 1;   
+                    transition: all .2s linear;
+                }
+            }
+            .pink {
+                background-color:#ff028e;
+                 span { 
+                    opacity: 1;   
+                    transition: all .2s linear;
+                    color: $white; 
+                }
+            }
+            .red { 
+                background-color:red; 
+                 span {  
+                    opacity: 1;
+                    transition: all .2s linear;
+                    color: $white; 
+                }
+            }
+            .orange { 
+                background-color:rgb(255, 102, 0); 
+                 span {  
+                    opacity: 1;
+                    transition: all .2s linear;
+                    color: $white; 
+                }
+            }
+            .yellow { 
+                background-color:rgb(255, 225, 90); 
+                 span {  
+                    opacity: 1;
+                    transition: all .2s linear; 
+                }
+            }
+        }
+    }
+    &_link {
+        position: absolute;
+        top: -30px;
+        left: 0; 
+        background: $white;
+        padding: 8px 15px;
+        text-align: center;
+        opacity: 0; 
+        border-radius: 5px;
+        margin: 10px;
+        border: 1px solid transparent;
+        span {
+            display: inline-block;
+            //font-family: $noto-medium;
+            color: $darkgray;
+            letter-spacing: -1px;
+            white-space: nowrap;
+        }
+        &:focus { 
+            top: 0;
+            background-color: rgb(255, 220, 34);
+            border: 1px solid $darkgray;
+            text-decoration: none;
+            z-index: 1000;
+            opacity: 1;
+        }
+    } 
+}  

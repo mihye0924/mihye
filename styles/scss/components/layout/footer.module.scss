@@ -1,0 +1,38 @@
+.footer {
+    &_wrap {  
+        border-top: 1px solid #f1f1f1; 
+        :global {
+            .l-content {
+                padding: 20px 20px !important;
+            }
+        } 
+        span {
+            text-align: center; 
+            margin-bottom: 10px;
+        }
+        span, p {
+            font-size: 18px;
+            text-align: center;
+        } 
+    }
+}
+
+@media (max-width:$d-width) {
+    .footer {
+        &_wrap {     
+            span, p { 
+                font-size: 16px;
+            }
+        }
+    } 
+}
+
+@media (max-width:$m-width) {
+    .footer {
+        &_wrap {     
+            span, p { 
+                font-size: 12px;
+            }
+        }
+    } 
+}

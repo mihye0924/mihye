@@ -1,0 +1,30 @@
+.content { 
+  &_wrap {
+    position: absolute;  
+    width: 100%; 
+    height: 100vh; 
+    background-color: #fff;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: -20px;
+      right: 0;
+      height: 20px;
+      z-index: 1;
+      background: url("/mihye/images/common/bg_wave.png") repeat-x; 
+      background-position: 0 bottom;
+      animation: bg-wave 3s linear infinite;
+    }
+  }
+}   
+ 
+@keyframes bg-wave {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+      background-position-x: 275px;
+  }
+}
