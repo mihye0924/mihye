@@ -1,6 +1,7 @@
 
 .title {
   &_h1 {  
+      transition: all .5s linear;
       text-align: center;
       margin-bottom: 50px;
       font-size: 130px; 
@@ -10,12 +11,13 @@
       font-family: $popins-medium;
     } 
     &_h2 {
+      transition: all .5s linear;
       position: relative;
       display: inline-block;
       font-size: 32px;
       font-weight: 700;
       background-color: #000;
-      color: #fff;
+      color: #fff; 
       padding: 10px 20px;
       color: #fff; 
       border-radius: 35px;
@@ -43,7 +45,7 @@
       font-size: 12vw;
       } 
       &_h2 {
-        font-size: 2vw; 
+        font-size: 2.5vw; 
         color: #fff; 
         border-radius: 35px;
         margin: 0 0 15px 0;
@@ -55,6 +57,13 @@
   } 
 }
 
+@media (max-width:$d2-width) {   
+  .title {
+    &_h1 {  
+      font-size: 10vw;
+      }  
+  } 
+}
 @media (max-width:$t-width) {   
   .title {
     &_h1 {  
@@ -71,7 +80,7 @@
       font-size: 40px; 
     } 
     &_h2 {
-      font-size: 16px;  
+      font-size: 14px;  
     }  
     &_h2 {  
       &::before { 

@@ -9,6 +9,7 @@ const Footer = () => {
                 <p>본 사이트는 상업적 목적이 아닌 개인포트폴리오 사이트로 제작되었습니다.
                     일부 이미지 및 폰트 등은 그 출처가 따로 있음을 밝힙니다.</p>
             </div> 
+            <button className={footer.footer_topbtn} onClick={() => { window.scrollTo(0,0)}}>TOP</button>
         </footer>
     )
 }

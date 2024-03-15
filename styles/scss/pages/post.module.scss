@@ -27,7 +27,7 @@
         }
       }
       span {
-        color: #ff8f00;
+        color: #8a8acb;
         font-weight: 700;
       }
     }
@@ -38,7 +38,7 @@
         position: relative;
         display: inline-block;
             span {
-            color: #ff8f00;
+            color: #8a8acb;
             font-weight: 700;
             }  
         }
@@ -86,7 +86,8 @@
             align-items: center;
             gap: 10px;
             &:hover {
-                background: #ff9105;
+                background: #8a8acb;
+                transition: .3s ease-in-out;
                 color: #fff;
                 :global {
                     .github {

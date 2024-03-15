@@ -2,15 +2,16 @@ import Header from '@/components/layout/Header'
 import { useRouter } from 'next/router'
 import post from "@/styles/scss/pages/post.module.scss"
 import Portfolio from '@/pages/api/Portfolio.json'
-import { prefix } from '@/config/config'
-import RTop from '@/components/common/RTop'
+import { prefix } from '@/config/config' 
 import Footer from '@/components/layout/Footer'
 import { useEffect, useState } from 'react' 
+import { gsap } from '@/pages/_app'
 
 const Post = () => {
   const [num, setNum] = useState(0);
   const router = useRouter()  
-  useEffect(() => {
+  useEffect(() => { 
+    
     if (router.isReady) {
       const { id } = router.query;
       if (!id) return;
@@ -18,7 +19,7 @@ const Post = () => {
     }
   }, [router.isReady, router.query]);
   return <>
-    <Header type="white"/>
+    <Header type="prev" />
     <div className={post.post_wrap}>
       <div className='l-content'>
         <h2>{Portfolio[num].title}</h2>
@@ -70,8 +71,7 @@ const Post = () => {
         }
       </div>
     </div>
-    <Footer />
-    <RTop />
+    <Footer /> 
   </>
 }
 
