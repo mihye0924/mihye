@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Context from '@/context/context';
 import { useCallback, useContext, useEffect } from 'react' 
 import { gsap } from '../../pages/_app'
-import { handleCursor } from '@/pages/js/cursor';
+import { handleCursor } from '@/js/cursor';
 const Portfolio = () => {     
     const { prefix } = useContext(Context); 
 

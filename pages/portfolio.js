@@ -4,7 +4,7 @@ import Header from "@/components/layout/Header"
 import content from "@/styles/scss/pages/content.module.scss" 
 import all from '@/styles/scss/pages/cursor.module.scss'
 import { useEffect } from "react"
-import { handleCursorMove } from "@/pages/js/cursor"
+import { handleCursorMove } from "@/js/cursor.js"
 
 export default function PortfolioPage() {    
     useEffect(() => {  

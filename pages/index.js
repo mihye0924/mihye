@@ -6,7 +6,7 @@ import About from '@/components/content/About'
 import Portfolio from '@/components/content/Portfolio'    
 import Footer from '@/components/layout/Footer';
 import all from '@/styles/scss/pages/cursor.module.scss'    
-import { handleCursorMove } from "@/pages/js/cursor"
+import { handleCursorMove } from "@/js/cursor.js"
 
 export default function Home() {  
 
