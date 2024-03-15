@@ -67,7 +67,7 @@ const Portfolio = () => {
                                     tabIndex={0}
                                     className='active'
                                 >
-                                    <Link tabIndex={-1} href={ `/post/${item.id}` }>
+                                    <Link tabIndex={-1} href={ `${prefix}/post/${item.id}` }>
                                         <p>{item.id}</p>
                                         <div className={portfolio.portfolio_box_ul_img}> 
                                             <img src={`${prefix}/${item.img}`} alt={item.title}/> 
