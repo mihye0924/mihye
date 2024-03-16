@@ -2,7 +2,7 @@ import title from '@/styles/scss/components/common/title.module.scss'
 
 const RTitle = ({mainTitle, subTitle, animate}) => { 
     return(
-    <div>
+    <>
         {
             mainTitle && 
             <h1 className={`${title.title_h1} ${animate}`}> 
@@ -15,7 +15,7 @@ const RTitle = ({mainTitle, subTitle, animate}) => {
                 {subTitle}
             </h2>
         }
-    </div>
+    </>
     )
 }
 export default RTitle

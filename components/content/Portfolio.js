@@ -54,47 +54,45 @@ const Portfolio = () => {
     
     
     return(
-        <section className={`${portfolio.portfolio_wrap} portfolio`}> 
+        <section className={`${portfolio.portfolio_wrap} portfolio l-content`}>  
             <RTitle mainTitle="Portfolio" animate="active" />
-            <div className="l-content">  
-                <div className={portfolio.portfolio_box}> 
-                    <ul className={`ul ${portfolio.portfolio_box_ul}`}>
-                        {
-                            PortfolioList.map((item,index) => {
-                            return(
-                                <li  
-                                    key={item.id}  
-                                    tabIndex={0}
-                                    className='active'
-                                >
-                                    <Link tabIndex={-1} href={ `${prefix}/post/${item.id}` }>
-                                        <p>{item.id}</p>
-                                        <div className={portfolio.portfolio_box_ul_img}> 
-                                            <img src={`${prefix}/${item.img}`} alt={item.title}/> 
-                                        </div>
-                                    </Link>
-                                        <div className={portfolio.portfolio_box_ul_subbox}> 
-                                            <span>{item.title}</span>
-                                            <span>{item.category}</span> 
-                                            {
-                                                item.keywords.map((item2) => {
-                                                    return(
-                                                        <div className={portfolio.portfolio_box_ul_keywords} key={item2.id}>
-                                                            <span># {item2.label1}</span>
-                                                            <span># {item2.label2}</span>
-                                                            <span># {item2.label3}</span>
-                                                        </div>
-                                                    )
-                                                })
-                                            }
-                                        </div>
-                                </li>
-                                )
-                            })
-                        }
-                    </ul> 
-                </div> 
-            </div>   
+            <div className={portfolio.portfolio_box}> 
+                <ul className={`ul ${portfolio.portfolio_box_ul}`}>
+                    {
+                        PortfolioList.map((item,index) => {
+                        return(
+                            <li  
+                                key={item.id}  
+                                tabIndex={0}
+                                className='active'
+                            >
+                                <Link tabIndex={-1} href={ `${prefix}/post/${item.id}` }>
+                                    <p>{item.id}</p>
+                                    <div className={portfolio.portfolio_box_ul_img}> 
+                                        <img src={`${prefix}/${item.img}`} alt={item.title}/> 
+                                    </div>
+                                </Link>
+                                    <div className={portfolio.portfolio_box_ul_subbox}> 
+                                        <span>{item.title}</span>
+                                        <span>{item.category}</span> 
+                                        {
+                                            item.keywords.map((item2) => {
+                                                return(
+                                                    <div className={portfolio.portfolio_box_ul_keywords} key={item2.id}>
+                                                        <span># {item2.label1}</span>
+                                                        <span># {item2.label2}</span>
+                                                        <span># {item2.label3}</span>
+                                                    </div>
+                                                )
+                                            })
+                                        }
+                                    </div>
+                            </li>
+                            )
+                        })
+                    }
+                </ul> 
+            </div>  
         </section>
     )
 }
