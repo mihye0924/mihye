@@ -31,7 +31,7 @@ const Intro = () => {
           </span>
         </div> 
         <div className={`${intro.intro_image} ${intro["intro_image_on"]}`}>
-          <img src={`${prefix}/images/common/mihye.png`} alt="circle"/>
+          <img src={`${prefix}/images/common/mihye.png`} alt="mihye"/>
           <span>웹 퍼블리셔</span>
           <span>1년차 조미혜</span>
         </div>

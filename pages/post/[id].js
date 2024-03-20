@@ -4,14 +4,14 @@ import post from "@/styles/scss/pages/post.module.scss"
 import Portfolio from '@/pages/api/Portfolio.json'
 import { prefix } from '@/config/config' 
 import Footer from '@/components/layout/Footer'
-import { useEffect, useState } from 'react' 
-import { gsap } from '@/pages/_app'
+import { useCallback, useEffect, useState } from 'react'  
 
 const Post = () => {
   const [num, setNum] = useState(0);
   const router = useRouter()  
-  useEffect(() => { 
-    
+
+
+  useEffect(() => {  
     if (router.isReady) {
       const { id } = router.query;
       if (!id) return;

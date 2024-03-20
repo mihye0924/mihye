@@ -6,15 +6,14 @@
             .l-content {
                 padding: 20px 20px !important;
                 background-color: #fff;
+                text-align: center; 
             }
         } 
         span {
-            text-align: center; 
             margin-bottom: 10px;
         }
         span, p {
             font-size: 14px;
-            text-align: center;
         } 
     }
     &_topbtn { 
@@ -39,11 +38,11 @@
             :global {
                 .l-content { 
                     flex: 1 0 85%;
+                    text-align: left; 
                 }
             }   
             span, p { 
                 font-size: 14px;
-                text-align: left;
             }
         }
         &_topbtn { flex: 1; }
@@ -52,26 +51,16 @@
 @media (max-width:$t-width) {
     .footer {
         &_wrap {   
+            flex-direction: column;   
             :global {
                 .l-content { 
+                    font-size: 12px;
                     flex: 1 0 75%;
                 }
-            }   
-            
-        }
-    } 
-}
-
-@media (max-width:$m-width) {
-    .footer {
-        &_wrap {  
-            flex-direction: column;   
-            span, p { 
-                font-size: 12px;
-            }
+            }    
         }
         &_topbtn { 
             margin: 0 15px 15px;
         }
     } 
-}
+} 

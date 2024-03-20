@@ -1,5 +1,4 @@
-import { useCallback, useEffect } from 'react';
-import Link from 'next/link'    
+import { useCallback, useEffect } from 'react'; 
 import Header from '@/components/layout/Header'
 import Intro from '@/components/content/Intro' 
 import About from '@/components/content/About' 
@@ -13,9 +12,9 @@ export default function Home() {
   // 본문 바로가기
   const handleKeyBoard = useCallback((e) => {
     const top = document.querySelector(`.about`).offsetTop; 
-    if(e.code === 'Space') { 
+    if(e.code === 'Space' || e.code === 'Enter') { 
       e.preventDefault()
-      window.scrollTo(0, top - 50); 
+      window.scrollTo(0, top - 170); 
     } 
   },[])
   
@@ -35,9 +34,9 @@ export default function Home() {
           </div>
         </div>
         <div className={all.all_skip}>
-          <Link href="#intro" onKeyDown={handleKeyBoard} className={all.all_link}>
+          <button href="/" onKeyDown={handleKeyBoard} className={all.all_link}>
             <span>콘텐츠 바로가기</span>
-          </Link>
+          </button>
         </div> 
         <Header/>  
         <Intro/>  

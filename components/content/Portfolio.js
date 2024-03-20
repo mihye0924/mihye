@@ -16,18 +16,12 @@ const Portfolio = () => {
         portfolio.forEach((item) => { 
             item.addEventListener('focus', (e) => {     
                 portfolio.forEach((item) => {
-                    if(item.classList.contains('active')) { 
-                        item.classList.remove('active')
+                    if(item.classList.contains('tabActive')) { 
+                        item.classList.remove('tabActive')
                     }
                 })
-                e.target.classList.add('active') 
-            }) 
-            item.addEventListener('keydown',(e) => { 
-                if(e.key === 'Enter') {
-                    const a = e.target.querySelector('a')
-                    a.click()
-                }
-            })
+                e.target.classList.add('tabActive') 
+            })  
         }) 
     },[])
 
@@ -59,34 +53,30 @@ const Portfolio = () => {
             <div className={portfolio.portfolio_box}> 
                 <ul className={`ul ${portfolio.portfolio_box_ul}`}>
                     {
-                        PortfolioList.map((item,index) => {
+                        PortfolioList.map((item) => {
                         return(
-                            <li  
-                                key={item.id}  
-                                tabIndex={0}
-                                className='active'
-                            >
-                                <Link tabIndex={-1} href={ `${prefix}/post/${item.id}` }>
+                            <li className='active' key={item.id} tabIndex="-1">
+                                <Link className='tabActive' tabIndex="0" href={ `${prefix}/post/${item.id}` }>
                                     <p>{item.id}</p>
                                     <div className={portfolio.portfolio_box_ul_img}> 
                                         <img src={`${prefix}/${item.img}`} alt={item.title}/> 
                                     </div>
                                 </Link>
-                                    <div className={portfolio.portfolio_box_ul_subbox}> 
-                                        <span>{item.title}</span>
-                                        <span>{item.category}</span> 
-                                        {
-                                            item.keywords.map((item2) => {
-                                                return(
-                                                    <div className={portfolio.portfolio_box_ul_keywords} key={item2.id}>
-                                                        <span># {item2.label1}</span>
-                                                        <span># {item2.label2}</span>
-                                                        <span># {item2.label3}</span>
-                                                    </div>
-                                                )
-                                            })
-                                        }
-                                    </div>
+                                <div className={portfolio.portfolio_box_ul_subbox}> 
+                                    <span>{item.title}</span>
+                                    <span>{item.category}</span> 
+                                    {
+                                        item.keywords.map((item2) => {
+                                            return(
+                                                <div className={portfolio.portfolio_box_ul_keywords} key={item2.id}>
+                                                    <span># {item2.label1}</span>
+                                                    <span># {item2.label2}</span>
+                                                    <span># {item2.label3}</span>
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                </div>
                             </li>
                             )
                         })

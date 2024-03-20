@@ -15,13 +15,39 @@ const Header = ({type}) => {
       router.push(`/${link}`); 
       setMenu(false)
     }else{  
-      window.scrollTo(0, top.offsetTop - 50); 
+      window.scrollTo(0, top.offsetTop - 170); 
       setMenu(false) 
     }
   },[router])
 
-  useEffect(() => {      
-  },[])
+  const handleMenu = useCallback(() => {
+    const nav = document.querySelector('.nav');
+    const focusableContent = document.querySelectorAll('.header nav button') 
+    const menuBtn = document.querySelector('.header .menu button')  
+    const lastFocusableElement = focusableContent[focusableContent.length - 1]; 
+    nav.addEventListener("keydown", (e) => {
+      let isTabPressed = e.key === 'Tab' || e.keyCode === 9; 
+      if (!isTabPressed) {
+        return;
+      }
+      if (e.shiftKey) {
+        if(document.activeElement === menuBtn) {
+          lastFocusableElement.focus();
+          e.preventDefault();
+        }
+      } else {
+        if (document.activeElement === lastFocusableElement) { 
+          menuBtn.focus();
+          e.preventDefault();
+        }
+      }
+    })
+    setMenu(!menu)
+  },[menu])
+  
+
+  useEffect(() => {  
+  },[handleMenu])
 
     return(  
     <header className={`${header.header_wrap} header`}> 
@@ -29,7 +55,7 @@ const Header = ({type}) => {
         {
           type ==="prev" ? 
           <>
-           <button onClick={() => router.push('/')}>
+           <button className='prev' onClick={() => router.push('/')}>
             <img src={`${prefix}/images/common/icon_arrow_right.png`} alt='이전'/>
             </button>
           </>
@@ -40,21 +66,21 @@ const Header = ({type}) => {
             </button>
           </h1>
         }
-        <div className={`${header.header_menu} ${menu ? header["header_menu_active"]:""}`}>
+        <div className={`menu ${header.header_menu} ${menu ? header["header_menu_active"]:""}`}>
           <p>Menu</p>
-          <button onClick={() => setMenu(!menu)}>
+          <button onClick={handleMenu}>
             <span></span>
             <span></span> 
           </button>
-          <div className={header.header_menu_nav}> 
+          <div className={`${header.header_menu_nav} nav`}> 
             <nav>
               <ul>
                 {
                   navList.map((item) => {
                     return(
-                      <li key={item.id}>
+                      <li tabIndex="-1" key={item.id}>
+                        <button tabIndex="0" onClick={() =>handleLink(item.link)}>{item.title}</button>
                         <span>{item.title}</span>
-                        <button onClick={() =>handleLink(item.link)}>{item.title}</button>
                       </li>
                     )
                   })

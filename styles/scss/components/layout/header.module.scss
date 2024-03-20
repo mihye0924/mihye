@@ -130,6 +130,10 @@
                 width: fit-content;
                 height: initial;
                 line-height: 1.2; 
+                &:hover,
+                &:focus { 
+                    animation: textani 1s linear forwards alternate; 
+                }
               }   
               span {      
                 transition: all .5s linear; 
@@ -138,11 +142,6 @@
                 position: initial;  
                 font-size: 100px; 
                 color: #fff;     
-              }
-              &:hover {
-                button{ 
-                  animation: textani 1s linear forwards alternate; 
-                } 
               }
             }
           }
