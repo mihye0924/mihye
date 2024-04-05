@@ -39,7 +39,7 @@ const Portfolio = () => {
                 start: '0 80%',
                 end: '0 80%',
                 scrub: 0,
-                markers: true,
+                // markers: true,
                 toggleActions: 'play reverse none reverse'
             },
         })
