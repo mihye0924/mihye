@@ -1,0 +1,186 @@
+[
+    {
+        "id": 1,
+        "title" : "Design",
+        "koTitle" : "디자인",
+        "content" : [
+            {
+                "id": 1,
+                "label" : "Photoshop, Illustrator를 이용한 디자인 및 편집 작업이 가능합니다."
+            },
+            {
+                "id": 2,
+                "label" : "Figma를 이용한 UX/UI 설계와 프로토 타이핑이 가능합니다."
+            }
+        ],
+        "image": [
+            {
+                "id": 1,
+                "title": "photoshop",
+                "label" : "/mihye/images/common/icon_ps.jpg"
+            },
+            {
+                "id": 2, 
+                "title": "illustration",
+                "label": "/mihye/images/common/icon_ai.png"
+            },
+            {
+                "id": 3,
+                "title" : "figma",
+                "label": "/mihye/images/common/icon_figma.png"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title" : "Front-End",
+        "koTitle" : "프론트",
+        "content" : [
+            {
+                "id": 1,
+                "label" : "웹 표준, 웹 접근성, 크로스 브라우징 마크업이 가능합니다."
+            },
+            {
+                "id": 2,
+                "label" : "반응형, 모바일 웹에 대한 이해 및 제작이 가능합니다."
+            },
+            {
+                "id": 3,
+                "label" : "HTML, CSS, SASS(SCSS), Styled-Components 를 이용한 퍼블리싱이 가능합니다."
+            },
+            {
+                "id": 4,
+                "label" : "Javascript를 이용한 동적인 웹 구현이 가능합니다."
+            },
+            {
+                "id": 5,
+                "label" : "Vue, React 프레임워크에 대한 지식이 있습니다."
+            }
+        ],
+        "image": [
+            {
+                "id": 1,
+                "title": "html",
+                "label": "/mihye/images/common/icon_html.png"
+            },
+            {
+                "id": 2, 
+                "title": "css",
+                "label": "/mihye/images/common/icon_css.png"
+            },
+            {
+                "id": 3,
+                "title" : "javascript",
+                "label": "/mihye/images/common/icon_js.png"
+            },
+            {
+                "id": 4,
+                "title" : "sass",
+                "label": "/mihye/images/common/icon_sass.png"
+            }, 
+            {
+                "id": 5,
+                "title" : "styled-components",
+                "label": "/mihye/images/common/icon_styled-components.png"
+            },
+            {
+                "id": 6,
+                "title" : "vue",
+                "label": "/mihye/images/common/icon_vue.png"
+            },
+            {
+                "id": 7,
+                "title" : "react",
+                "label": "/mihye/images/common/icon_react.png"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title" : "Back-End",
+        "koTitle" : "백엔드",
+        "content" : [
+            {
+                "id": 1,
+                "label" : "Node express 서버 통신이 가능합니다."
+            },
+            {
+                "id": 2,
+                "label" : "MySql에 대한 기초적인 이해와 경험이 있습니다."
+            }
+        ],
+        "image": [
+            {
+                "id": 1,
+                "title": "node",
+                "label": "/mihye/images/common/icon_node.png"
+            },
+            {
+                "id": 2, 
+                "title": "express",
+                "label": "/mihye/images/common/icon_express.png"
+            },
+            {
+                "id": 3,
+                "title" : "mysql",
+                "label": "/mihye/images/common/icon_mysql.png"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title" : "Tools",
+        "koTitle" : "협업",
+        "content" : [
+            {
+                "id": 1,
+                "label" : "Visual Studio Code 를 활용한 코드 작성이 가능합니다."
+            },
+            {
+                "id": 2,
+                "label" : "git, fork를 활용하여 gitlab, github 저장소를 활용합니다."
+            },
+            {
+                "id": 3,
+                "label" : "slack, jira를 활용한 협업이 가능합니다."
+            }
+        ],
+        "image": [
+            {
+                "id": 1,
+                "title": "vscode",
+                "label": "/mihye/images/common/icon_vscode.png"
+            },
+            {
+                "id": 2, 
+                "title": "git",
+                "label": "/mihye/images/common/icon_git.png"
+            },
+            {
+                "id": 3,
+                "title" : "github",
+                "label": "/mihye/images/common/icon_github.png"
+            },
+            {
+                "id": 4,
+                "title" : "gitlab",
+                "label": "/mihye/images/common/icon_gitlab.png"
+            },
+            {
+                "id": 5,
+                "title" : "fork",
+                "label": "/mihye/images/common/icon_fork.png"
+            },
+            {
+                "id": 6,
+                "title" : "slack",
+                "label": "/mihye/images/common/icon_slack.png"
+            },
+            {
+                "id": 7,
+                "title" : "jira",
+                "label": "/mihye/images/common/icon_jira.svg"
+            }
+        ]
+    }
+] 

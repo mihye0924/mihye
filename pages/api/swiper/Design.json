@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "brand": "올리브영",
+        "title":"블랙 프라이데이",
+        "img":"/images/content/design1.jpg" 
+    },
+    {
+        "id": 2,
+        "brand": "딜라이트",
+        "title":"쫀득한 말랭이",
+         "img":"/images/content/design2.jpg"
+    },
+    {
+        "id": 3,
+        "brand": "공차",
+        "title":"초콜렛 제주 그린티 스무디",
+        "img":"/images/content/design3.jpg"
+    }, 
+    {
+        "id": 4,
+        "brand": "올리브영",
+        "title":"블랙 프라이데이",
+        "img":"/images/content/design1.jpg"
+    },
+    {
+        "id": 5,
+        "brand": "딜라이트",
+        "title":"쫀득한 말랭이",
+         "img":"/images/content/design2.jpg"
+    },
+    {
+        "id": 6,
+        "brand": "공차",
+        "title":"초콜렛 제주 그린티 스무디",
+        "img":"/images/content/design3.jpg"
+    }
+]

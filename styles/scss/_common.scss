@@ -1,0 +1,33 @@
+
+.l {  
+    &-content { 
+        position: relative;
+        z-index: 1;
+        // display: flex;
+        // flex-direction: column;
+        width: 100%;
+        max-width: $width; 
+        margin: 0 auto; 
+        padding: 0 20px;
+    } 
+}
+
+// flex 
+.flex {
+    display: flex;
+}
+.space-between {
+    justify-content: space-between;
+}
+
+// table
+.table {
+    border-collapse : collapse;
+    & { 
+        tr, td{
+            border: 1px solid $darkgray;
+        }
+    }
+} 
+ 
+ 
