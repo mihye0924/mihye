@@ -16,10 +16,9 @@ const About = () => {
         ease: "power4.in",
         scrollTrigger: {
           trigger: item,
-          start: '-50px center',
-          end: '-50px center',
+          start: '0 80%',
+          end: '0 80%',
           scrub: 0,
-          // markers: true,
           toggleActions: 'play reverse none reverse'
         },
       })

@@ -27,18 +27,20 @@ const Portfolio = () => {
 
     useEffect(()=>{   
         const active = document.querySelectorAll(".portfolio .active");
-        active.forEach((item) => { 
-        gsap.fromTo(item, {opacity: 0}, {
+        active.forEach((item,index) => { 
+        gsap.fromTo(active[index], {opacity: 0}, {
             y: -50, 
             opacity: 1, 
             duration: .5,  
+            delay: .2  * index,
             ease: "power4.in",
             scrollTrigger: {
-            trigger: item,
-            start: '-50px center',
-            end: '-50px center',
-            scrub: 0,
-            toggleActions: 'play reverse none reverse'
+                trigger: item,
+                start: '0 80%',
+                end: '0 80%',
+                scrub: 0,
+                markers: true,
+                toggleActions: 'play reverse none reverse'
             },
         })
         })
