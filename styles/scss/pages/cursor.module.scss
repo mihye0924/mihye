@@ -112,3 +112,10 @@
         }
     } 
 }  
+@media (max-width: $m-width) {
+    .all {
+        &_cursor {
+            display: none;
+        }
+    }
+}
