@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     h1 {
-      transition: transform .5s linear;
+      transition: all .5s linear;
       font-family: $Moul;  
       font-size: 20px;
       height: 80px;
@@ -90,13 +90,13 @@
             top: 20px;
             left: 50%;
             transform: translate(-50%, -50%) rotate(-45deg);
-            transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
           }
           &:nth-of-type(2){
             width: 25px;
             top: 20px;
             left: 50%; 
-            transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             transform: translate(-50%, -50%) rotate(45deg);
           }
         }
